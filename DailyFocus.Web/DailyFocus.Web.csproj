@@ -20,4 +20,8 @@
     <ProjectReference Include="..\DailyFocus.Domain\DailyFocus.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Tasks\" />
+  </ItemGroup>
+
 </Project>
