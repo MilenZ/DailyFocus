@@ -1,4 +1,4 @@
-﻿namespace DailyFocus.Infrastructure.Data
+﻿ namespace DailyFocus.Infrastructure.Data
 {
     public enum TaskPriority
     {
