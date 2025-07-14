@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DailyFocus.Infrastructure.Data
 {
@@ -31,6 +26,11 @@ namespace DailyFocus.Infrastructure.Data
 
         public TaskPriority Priority { get; set; }
 
+        [Required]
+        public string CategoryId { get; set; } = null!;
+
+        [ForeignKey(nameof(CategoryId))]
+        public Category Category { get; set; } = null!;
 
         [Required]
         public string UserId { get; set; } = null!;
@@ -40,12 +40,3 @@ namespace DailyFocus.Infrastructure.Data
     }
 }
 
-/*
-Id	uniqueidentifier (GUID)	Уникален идентификатор
-Title	nvarchar(MAX)	Заглавие на задачата
-Description	nvarchar(MAX)	Описание (опционално)
-CreatedOn	datetime	Дата на създаване
-IsCompleted	bit	Завършена ли е
-Priority	nvarchar(20)	Enum: Low, Medium, High
-UserId	nvarchar(450)	Връзка към потребителя
- * */
