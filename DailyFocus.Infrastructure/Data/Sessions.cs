@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DailyFocus.Infrastructure.Data
@@ -11,18 +12,18 @@ namespace DailyFocus.Infrastructure.Data
         public Guid TaskItemId { get; set; }
 
         [ForeignKey(nameof(TaskItemId))]
+        public virtual TaskItem TaskItem { get; set; } = null!;
 
         public string? UserId { get; set; } = null;
 
         [ForeignKey(nameof(UserId))]
-        public ApplicationUser User { get; set; } = null!;
-
-        public TaskItem TaskItem { get; set; } = null!;
+        public virtual ApplicationUser User { get; set; } = null!;
 
         [Required]
         public DateTime StartedAt { get; set; } = DateTime.UtcNow;
         public DateTime? EndedAt { get; set; }
 
+        [Required]
         public SessionStatus Status { get; set; } = SessionStatus.Created;
     }
 }
