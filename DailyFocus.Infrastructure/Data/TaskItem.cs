@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DailyFocus.Infrastructure.Data
@@ -30,13 +31,13 @@ namespace DailyFocus.Infrastructure.Data
         public string CategoryId { get; set; } = null!;
 
         [ForeignKey(nameof(CategoryId))]
-        public Category Category { get; set; } = null!;
+        public virtual Category Category { get; set; } = null!;
 
         [Required]
         public string UserId { get; set; } = null!;
 
         [ForeignKey(nameof(UserId))]
-        public ApplicationUser User { get; set; } = null!;
+        public virtual ApplicationUser User { get; set; } = null!;
     }
 }
 
