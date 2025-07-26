@@ -15,6 +15,6 @@ namespace DailyFocus.Data.Data
         public DateTime LastActiveDate { get; set; } = DateTime.UtcNow;
 
         [ForeignKey(nameof(UserId))]
-        public virtual ApplicationUser User { get; set; } = null!;
+        public virtual IdentityUser User { get; set; } = null!;
     }
 }

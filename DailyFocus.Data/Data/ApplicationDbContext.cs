@@ -15,7 +15,7 @@ namespace DailyFocus.Data.Data
         public virtual DbSet<SessionPreset> SessionPresets { get; set; } = null!;
         public virtual DbSet<Sessions> Sessions { get; set; } = null!;
         public virtual DbSet<SupportMessage> SupportMessages { get; set; } = null!;
-        public virtual DbSet<ApplicationUser> Users { get; set; } = null!;
+        //public virtual DbSet<IdentityUser> Users { get; set; } = null!;
         public virtual DbSet<Tag> Tags { get; set; } = null!;
         public virtual DbSet<TaskComment> TaskComments { get; set; } = null!;
         public virtual DbSet<TaskItemTag> TaskItemTags { get; set; } = null!;

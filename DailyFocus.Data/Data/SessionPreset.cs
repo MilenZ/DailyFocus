@@ -31,7 +31,7 @@ namespace DailyFocus.Data.Data
         public string CreatedBy { get; set; } = null!; // Optional admin who created this preset
 
         [ForeignKey(nameof(CreatedBy))]
-        public virtual  ApplicationUser User { get; set; } = null!;
+        public virtual  IdentityUser User { get; set; } = null!;
     }
 }
 

@@ -13,7 +13,7 @@ namespace DailyFocus.Data.Data
         public string UserId { get; set; } = null!;
 
         [ForeignKey(nameof(UserId))]
-        public virtual ApplicationUser User { get; set; } = null!;
+        public virtual IdentityUser User { get; set; } = null!;
 
         [Required]
         public Guid SessionPresetId { get; set; }

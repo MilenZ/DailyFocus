@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DailyFocus.Data.Data
@@ -12,7 +13,7 @@ namespace DailyFocus.Data.Data
         public string UserId { get; set; } = null!;
 
         [ForeignKey(nameof(UserId))]
-        public virtual ApplicationUser User { get; set; } = null!;
+        public virtual IdentityUser User { get; set; } = null!;
 
         [Required]
         public string Subject { get; set; } = null!;
