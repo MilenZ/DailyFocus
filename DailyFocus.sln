@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyFocus.Tests", "DailyFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyFocus.Web", "DailyFocus.Web\DailyFocus.Web.csproj", "{4FD98AC5-AE00-2780-4C51-6919B9250F8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyFocus.GCommon", "DailyFocus.GCommon\DailyFocus.GCommon.csproj", "{4098A7E0-44A5-4DCE-B286-2F63F474DBB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4FD98AC5-AE00-2780-4C51-6919B9250F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FD98AC5-AE00-2780-4C51-6919B9250F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FD98AC5-AE00-2780-4C51-6919B9250F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4098A7E0-44A5-4DCE-B286-2F63F474DBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4098A7E0-44A5-4DCE-B286-2F63F474DBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4098A7E0-44A5-4DCE-B286-2F63F474DBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4098A7E0-44A5-4DCE-B286-2F63F474DBB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

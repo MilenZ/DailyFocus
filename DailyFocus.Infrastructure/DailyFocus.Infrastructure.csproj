@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DailyFocus.Application\DailyFocus.Application.csproj" />
     <ProjectReference Include="..\DailyFocus.Domain\DailyFocus.Domain.csproj" />
+    <ProjectReference Include="..\DailyFocus.GCommon\DailyFocus.GCommon.csproj" />
   </ItemGroup>
 
   <ItemGroup>
