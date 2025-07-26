@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using static DailyFocus.Data.Data.UserStatistics;
 
 namespace DailyFocus.Data.Data.Configuration
 {
@@ -33,9 +32,9 @@ namespace DailyFocus.Data.Data.Configuration
                 .Property(us => us.LastActiveDate)
                 .HasColumnType("datetime2")
                 .HasDefaultValueSql("GETUTCDATE()")
-                //.HasConversion(
-                //    v => v.ToString(LastActiveDateFormat),
-                //    v => DateTime.ParseExact(v, LastActiveDateFormat, null))
+                .HasConversion(
+                    v => v.ToString("dd-MM-yyyy HH:mm:ss"),
+                    v => DateTime.ParseExact(v, "dd-MM-yyyy HH:mm:ss", null))
                 .IsRequired();
         }
     }
